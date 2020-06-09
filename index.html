@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Widget</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/248a187d0b.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <h1>Pedro's weekly goal</h1>
+      <section class="goal">
+        <div class="currentGoal">
+          <img src="assets/asset-4-1 (1).svg" alt="chart" />
+        </div>
+        <div class="streak">
+          <p><span>12</span> more mins. to achieve this week's Goal</p>
+          <div class="currentStreak">
+            <span>4</span>
+            <span>Current Streak</span>
+          </div>
+          <div class="bestStreak">
+            <span>12</span>
+            <span>Best Streak</span>
+          </div>
+        </div>
+      </section>
+      <section class="leaderboard">
+        <div class="dropdown">
+          <h1>Leaderboard</h1>
+          <select name="selectDuration">
+            <option value="week">Week</option>
+            <option value="month">Month</option>
+          </select>
+          <ul>
+            <li>
+              <div>
+                <span>1</span>
+                <span>Walter Wynne</span>
+                <span>105m</span>
+                <i class="fas fa-location-arrow"></i>
+              </div>
+            </li>
+            <li>
+              <div>
+                <span>2</span>
+                <span>Annabel Ferdinand</span>
+                <span>52m</span>
+                <div class="circle"></div>
+              </div>
+            </li>
+            <li>
+              <div>
+                <span>3</span>
+                <span>Marty McFly</span>
+                <span>50m</span>
+                <i class="fas fa-location-arrow"></i>
+              </div>
+            </li>
+            <li>
+              <div>
+                <span>7</span>
+                <span>You!</span>
+                <span>38m</span>
+                <i class="fas fa-location-arrow"></i>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
