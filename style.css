@@ -2,6 +2,14 @@
   margin: 0;
   box-sizing: border-box;
 }
+
+:root {
+  --greenColor: #0dbf6d;
+  --blueColor: #83b3eb;
+  --lightGrayColor: #f9f9fb;
+  --grayColor: #dfe3e9;
+  --darkGrayColor: #a2a8b0;
+}
 html {
   font-family: "Roboto", sans-serif;
 }
@@ -22,7 +30,7 @@ html {
 h1 {
   font-size: small;
   text-transform: uppercase;
-  color: #83b3eb;
+  color: var(--blueColor);
 }
 
 .goal {
@@ -51,7 +59,7 @@ img {
 }
 
 .streak div {
-  background-color: #f9f9fb;
+  background-color: var(--lightGrayColor);
   flex-basis: 45%;
   margin-top: 10px;
 }
@@ -66,4 +74,92 @@ img {
 .streak div span:nth-child(1) {
   font-weight: bold;
   font-size: 16px;
+}
+.leaderboard {
+  margin-top: -15px;
+}
+
+.dropdown {
+  display: flex;
+  justify-content: space-between;
+}
+
+select {
+  width: 100px;
+  padding: 6px 2px;
+  border: 1px solid #999;
+  border-radius: 4px;
+  font-family: "Roboto", sans-serif;
+  font-size: 13px;
+  /* background-color: #f9f9fb; */
+  background-image: linear-gradient(#fff, #f3f5f8);
+  color: #888;
+}
+ul {
+  margin: 10px 0 auto 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+  margin-bottom: 3px;
+}
+
+li > div {
+  display: grid;
+  grid-template-columns: auto 3fr auto 30px;
+  width: 100%;
+  padding: 10px;
+  border-radius: 4px;
+  box-shadow: -10px 10px 10px -10px rgba(0, 0, 0, 0.1);
+}
+li > div > * {
+  line-height: 30px;
+}
+
+li div span:nth-child(1) {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+  text-align: center;
+  line-height: 30px;
+  border-radius: 50%;
+  border: 1.5px solid var(--greenColor);
+  color: var(--greenColor);
+  font-weight: bold;
+}
+
+li:nth-child(2) > div span:nth-child(1) {
+  color: var(--darkGrayColor);
+  border-color: var(--darkGrayColor);
+}
+
+li div span:nth-child(3) {
+  margin-right: 10px;
+}
+
+i {
+  display: inline-block;
+  color: var(--greenColor);
+  transform: rotate(-45deg);
+  margin: 5px 5px;
+}
+
+.circle {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: var(--grayColor);
+  margin: 7.5px auto;
+}
+
+li:last-child {
+  background-color: var(--greenColor);
+}
+
+li:last-child > div > span,
+li:last-child > div > i {
+  color: white;
+  border-color: white;
 }
