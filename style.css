@@ -103,9 +103,6 @@ ul {
 li {
   list-style: none;
   margin-bottom: 3px;
-}
-
-li > div {
   display: grid;
   grid-template-columns: auto 3fr auto 30px;
   width: 100%;
@@ -113,11 +110,20 @@ li > div {
   border-radius: 4px;
   box-shadow: -10px 10px 10px -10px rgba(0, 0, 0, 0.1);
 }
-li > div > * {
+
+/* li > div {
+  display: grid;
+  grid-template-columns: auto 3fr auto 30px;
+  width: 100%;
+  padding: 10px;
+  border-radius: 4px;
+  box-shadow: -10px 10px 10px -10px rgba(0, 0, 0, 0.1);
+} */
+li > * {
   line-height: 30px;
 }
 
-li div span:nth-child(1) {
+li span:nth-child(1) {
   display: inline-block;
   width: 30px;
   height: 30px;
@@ -130,12 +136,13 @@ li div span:nth-child(1) {
   font-weight: bold;
 }
 
-li:nth-child(2) > div span:nth-child(1) {
+li:nth-child(2) > span:nth-child(1),
+li:nth-child(2) > i {
   color: var(--darkGrayColor);
   border-color: var(--darkGrayColor);
 }
 
-li div span:nth-child(3) {
+li span:nth-child(3) {
   margin-right: 10px;
 }
 
@@ -146,20 +153,12 @@ i {
   margin: 5px 5px;
 }
 
-.circle {
-  width: 15px;
-  height: 15px;
-  border-radius: 50%;
-  background-color: var(--grayColor);
-  margin: 7.5px auto;
-}
-
 li:last-child {
   background-color: var(--greenColor);
 }
 
-li:last-child > div > span,
-li:last-child > div > i {
+li:last-child > span,
+li:last-child > i {
   color: white;
   border-color: white;
 }
