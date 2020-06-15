@@ -1,46 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Widget</title>
-    <link rel="stylesheet" href="style.css" />
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <script
-      src="https://kit.fontawesome.com/248a187d0b.js"
-      crossorigin="anonymous"
-    ></script>
-  </head>
 
-  <body>
-    <div class="wrapper">
-      <h1>Pedro's weekly goal</h1>
-      <section class="goal">
-        <div class="currentGoal">
-          <img src="assets/asset-4-1 (1).svg" alt="chart" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Widget</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/248a187d0b.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div class="wrapper">
+    <h1>Pedro's weekly goal</h1>
+    <section class="goal">
+      <div class="progressBar">
+        <!-- <img src="assets/asset-4-1 (1).svg" alt="chart" /> -->
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+          width="216.1px" height="188.4px" viewBox="0 14 216.1 188.4" enable-background="new 0 14 216.1 188.4"
+          xml:space="preserve">
+          <path fill="none" stroke="#dfe3e9" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"
+            stroke-miterlimit="10" d="
+              M 177.5, 181.4
+              c 19.4-18.4, 31.5-44.5, 31.5-73.3
+              c 0-55.8-45.2-101-101-101
+              S 7,52.2,7,108
+              c 0,28.9,12.1,54.9,31.5,73.3">
+          </path>
+          <path fill="none" stroke="#4990e2" stroke-width="8" stroke-dasharray="0, 490" stroke-linecap="round"
+            stroke-linejoin="round" stroke-miterlimit="10" d="
+              M 177.5, 181.4
+              c 19.4-18.4, 31.5-44.5, 31.5-73.3
+              c 0-55.8-45.2-101-101-101
+              S 7,52.2,7,108
+              c 0,28.9,12.1,54.9,31.5,73.3">
+          </path>
+
+
+        </svg>
+
+        <p>Current</p>
+        <span id="progress"></span>
+        <p>50m Goal</p>
+      </div>
+      <div class="streak">
+        <p><span id="minutes"></span> more mins. to achieve this week's Goal</p>
+        <div class="currentStreak">
+          <span id="currentStreak"></span>
+          <span>Current Streak</span>
         </div>
-        <div class="streak">
-          <p><span>12</span> more mins. to achieve this week's Goal</p>
-          <div class="currentStreak">
-            <span>4</span>
-            <span>Current Streak</span>
-          </div>
-          <div class="bestStreak">
-            <span>12</span>
-            <span>Best Streak</span>
-          </div>
+        <div class="bestStreak">
+          <span id="bestStreak"></span>
+          <span>Best Streak</span>
         </div>
-      </section>
-      <section class="leaderboard">
-        <div class="dropdown">
-          <h1>Leaderboard</h1>
-          <select name="selectDuration">
-            <option value="1">Week</option>
-            <option value="2">Month</option>
-          </select>
-        </div>
-          <ul id="listItems">
-            <!-- <li>
+      </div>
+    </section>
+    <section class="leaderboard">
+      <div class="dropdown">
+        <h1>Leaderboard</h1>
+        <select name="select Duration">
+          <option value="week">Week</option>
+          <option value="month">Month</option>
+        </select>
+      </div>
+      <ul id="listItems">
+        <!-- <li>
                 <span >1</span>
                 <span >Name</span>
                 <span>105m</span>
@@ -64,11 +88,12 @@
                 <span>38m</span>
                 <i class="fas fa-location-arrow"></i>
             </li> -->
-          </ul>
-        </div>
-      </section>
-    </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="index.js"></script>
-  </body>
+      </ul>
+  </div>
+  </section>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="index.js"></script>
+</body>
+
 </html>
